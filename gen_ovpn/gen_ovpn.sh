@@ -1,6 +1,6 @@
 #!/bin/bash
-#
-client_ovp=$(<./client.ovpn)
+BASEDIR=$(dirname "$0")
+client_ovp=$(<"$BASEDIR/client.ovpn")
 
 # set server name
 client_ovp=${client_ovp/my-server-1/$1}
